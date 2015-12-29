@@ -7,13 +7,16 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 
+
 import IHM.Gestion_Pokeck;
 import IHM.JdialogueAddCard;
+import IHM.ShowDeckContent;
 
 public class ControlerPokedeck implements ActionListener {
 	
 	private Gestion_Pokeck GP;
 	private JdialogueAddCard JAD = new JdialogueAddCard();
+	private ShowDeckContent SDC = new ShowDeckContent();
 	private static int nbcartesMax = 60;
 	
 	public ControlerPokedeck(Gestion_Pokeck Gestion_Pokeck){
@@ -35,6 +38,13 @@ public class ControlerPokedeck implements ActionListener {
 					JAD.setVisible(true);
 				}
 		}
+		
+		if(((JButton)(e.getSource())).getText()=="Consult"){
+			
+			SDC.setVisible(true);
+			
+		}
+		
 		
 		
 	}

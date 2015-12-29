@@ -20,7 +20,20 @@ public abstract class cards {
 	public String getName() {
 		return name;
 	}
-
 	
+	public String getType(){
+		
+		return type;
+	}
+	
+	public int getNumCarte(){
+		
+		return number;
+	}
+
+	public String getdescription(){
+		
+		return Description;
+	}
 	
 }

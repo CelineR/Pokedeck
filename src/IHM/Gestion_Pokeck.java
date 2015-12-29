@@ -44,6 +44,7 @@ public class Gestion_Pokeck extends JFrame {
 		contentPane.add(lblMenu);
 		
 		JButton btnConsult = new JButton("Consult");
+		btnConsult.addActionListener(new ControlerPokedeck(this));
 		btnConsult.setBounds(259, 107, 89, 23);
 		contentPane.add(btnConsult);
 		
