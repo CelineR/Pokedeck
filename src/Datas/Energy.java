@@ -1,22 +1,27 @@
 package Datas;
 
-public class Energy {
+public class Energy extends cards{
 	
-	private String energyType[]={"metal","combat","eau","electrik","feu","incolore","plante","psy","obscurite","dragon","fee"};
+	private static String tableenergyType[] = {"plante","feu","eau","electricite","psy","combat","obscurite","metal","fee","dragon","inclore"};
+	private String energyType;
 	
-
-	public Energy(String[] energyType) {
-		super();
-		this.energyType = energyType;
+	public Energy(String Name, String Type, int Number, String description, String energyType) {
+		super(Name, Type, Number, description);
+		this.energyType=energyType;
+		
 	}
 
-	public String[] getEnergyType() {
-		return energyType;
+	public static  String[] getEnergyType() {
+		return tableenergyType;
 	}
 
-//	public void setEnergyType(String[] energyType) {
-//		this.energyType = energyType;
+
+
+
+
+
 	
-//	}
+	
+
 
 }

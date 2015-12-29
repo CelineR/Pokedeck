@@ -10,7 +10,9 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+import Controlers.ControlerMenu;
 import Controlers.ControlerPokedeck;
+import Datas.Pokedeck;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -19,21 +21,6 @@ public class Gestion_Pokeck extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Gestion_Pokeck frame = new Gestion_Pokeck();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.
@@ -48,7 +35,7 @@ public class Gestion_Pokeck extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel label = new JLabel("");
-		label.setIcon(new ImageIcon("C:\\Users\\C\u00E9line\\Desktop\\pokemon.jpg"));
+		label.setIcon(new ImageIcon("Images\\pokemon.jpg"));
 		label.setBounds(10, 37, 197, 312);
 		contentPane.add(label);
 		

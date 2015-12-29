@@ -10,7 +10,7 @@ public class Pokedeck {
 	
 	public Pokedeck(ArrayList<cards> cardsList, String name) {
 		
-		CardsList = cardsList;
+		this.CardsList = cardsList;
 		this.name = name;
 	}
 
@@ -21,10 +21,11 @@ public class Pokedeck {
 		
 	}
 	
-	public ArrayList<cards> getCardList(){
-		
+	public ArrayList<cards> getCardsList() {
 		return CardsList;
 	}
-	
 
+	public String getName() {
+		return name;
+	}
 }

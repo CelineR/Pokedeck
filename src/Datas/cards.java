@@ -16,6 +16,7 @@ public abstract class cards {
 		 
 	 }
 
+
 	public String getName() {
 		return name;
 	}

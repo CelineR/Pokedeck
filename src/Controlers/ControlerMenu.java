@@ -16,20 +16,21 @@ public class ControlerMenu implements ActionListener {
 
 	
 	private menu MenuC;
-	private String NomPokecek;
-	private Pokedeck P1;
+	private Gestion_Pokeck GP;
+	private String NomPokedeck;
+	private static Pokedeck P1 = null;
+	private ArrayList<cards> ListCard = new ArrayList<cards>();
 
 	
 	public ControlerMenu(menu menu){
 		
-		
 		this.MenuC = menu;
 	}
+	
 	public void actionPerformed(ActionEvent e) {
 	
 		if(((JButton)(e.getSource())).getText()=="Nouveau"){
-
-		System.out.println("nouveau");	
+	
 		Gestion_Pokeck GP = new Gestion_Pokeck();
 		
 		if (MenuC.GetNamePoke().isEmpty()){
@@ -37,13 +38,14 @@ public class ControlerMenu implements ActionListener {
 			JOptionPane.showMessageDialog(MenuC,
 					"Vous devez entrer un nom pour votre pokedeck",
 					"Attention", JOptionPane.ERROR_MESSAGE);
+			
 		}else{
 	
 		GP.setVisible(true);
 		MenuC.setVisible(false);
-		NomPokecek=MenuC.GetNamePoke();
-		ArrayList<cards> ListCard = new ArrayList<cards>();
-		P1 = new Pokedeck(ListCard, NomPokecek);
+		NomPokedeck=MenuC.GetNamePoke();
+		P1 = new Pokedeck(ListCard, NomPokedeck);	
+		System.out.println(getP1());
 		
 		}
 		
@@ -57,14 +59,14 @@ public class ControlerMenu implements ActionListener {
 		MenuC.setVisible(false);
 		
 		}
+	
 	}
-	public Pokedeck getP1() {
+	
+	
+	public static Pokedeck getP1() {
 		return P1;
 	}
 	
-	public void setP1(Pokedeck p1) {
-		P1 = p1;
-	}
 
 	
 	

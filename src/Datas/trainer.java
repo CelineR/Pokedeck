@@ -1,16 +1,27 @@
 package Datas;
 
-public class trainer {
+import java.util.ArrayList;
+
+public class trainer extends cards {
 
 	private String trainerType;
-	private String RulesTrainer[];
-
-	public trainer(String trainerType, String[] rulesTrainer) {
-		super();
+	private ArrayList<Rules> RulesTrainer;
+	private static String TypeTrainerCard[]={"objet","supporter","stade","high-teck"};
+	
+	
+	public trainer(String Name, String Type, int Number, String description,
+			String trainerType, ArrayList<Rules> rulesTrainer) {
+		super(Name, Type, Number, description);
 		this.trainerType = trainerType;
-		RulesTrainer = rulesTrainer;
+		this.RulesTrainer = rulesTrainer;
 	}
 
+
+	public static String[] getTypeTrainerCard(){
+		
+		return TypeTrainerCard;
+		
+	}
 	public String getTrainerType() {
 		return trainerType;
 	}
@@ -19,7 +30,7 @@ public class trainer {
 	//	this.trainerType = trainerType;
 	//}
 
-	public String[] getRulesTrainer() {
+	public ArrayList<Rules> getRulesTrainer() {
 		return RulesTrainer;
 	}
 
