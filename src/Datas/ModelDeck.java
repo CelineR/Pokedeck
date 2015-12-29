@@ -56,5 +56,11 @@ public class ModelDeck extends AbstractTableModel  {
 		}
 		return null;
 	}
+
+	public void deleteProduit(int selectedRow) {
+		
+		ControlerMenu.getP1().getCardsList().remove(selectedRow);
+		
+	}
 	
 }

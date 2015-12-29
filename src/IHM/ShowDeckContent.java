@@ -54,7 +54,23 @@ public class ShowDeckContent extends JDialog {
 			btnOk.setBounds(52, 266, 89, 23);
 			contentPanel.add(btnOk);
 		}
+		{
+			JButton btnSupprimer = new JButton("Supprimer");
+			btnSupprimer.addActionListener(new ControlerShowDeck(this));
+			btnSupprimer.setBounds(254, 266, 89, 23);
+			contentPanel.add(btnSupprimer);
+		}
 		
 	}
 
+	
+	public ModelDeck getmodelMD(){
+		
+		return MD;
+	}
+	
+	public JTable getTable(){
+		
+		return table;
+	}
 }
