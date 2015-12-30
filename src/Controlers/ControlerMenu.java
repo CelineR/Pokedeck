@@ -49,15 +49,6 @@ public class ControlerMenu implements ActionListener {
 		}
 		
 		}
-		
-		if(((JButton)(e.getSource())).getText()=="OK"){
-
-		System.out.println("Ok");
-		Gestion_Pokeck GP = new Gestion_Pokeck();
-		GP.setVisible(true);
-		MenuC.setVisible(false);
-		
-		}
 	
 	}
 	

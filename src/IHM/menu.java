@@ -43,14 +43,6 @@ public class menu extends JFrame {
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblChoisirUnPokedeck = new JLabel("Choisir un Pokedeck exisant :");
-		lblChoisirUnPokedeck.setBounds(31, 94, 171, 14);
-		panel.add(lblChoisirUnPokedeck);
-		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(226, 93, 116, 17);
-		panel.add(comboBox);
-		
 		JLabel lblNouveauPokedeck = new JLabel("Nouveau Pokedeck :");
 		lblNouveauPokedeck.setBounds(72, 135, 116, 14);
 		panel.add(lblNouveauPokedeck);
@@ -59,11 +51,6 @@ public class menu extends JFrame {
 		textFieldNamePoke.setBounds(226, 132, 116, 20);
 		panel.add(textFieldNamePoke);
 		textFieldNamePoke.setColumns(10);
-		
-		JButton btnOk = new JButton("OK");
-		btnOk.addActionListener(new ControlerMenu(this));
-		btnOk.setBounds(253, 194, 89, 23);
-		panel.add(btnOk);
 		
 		JButton btnNouveau = new JButton("Nouveau");
 		btnNouveau.addActionListener(new ControlerMenu(this));

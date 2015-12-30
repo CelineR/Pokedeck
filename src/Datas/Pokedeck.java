@@ -1,8 +1,14 @@
 package Datas;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Pokedeck {
+import javax.swing.JOptionPane;
+
+public class Pokedeck implements Serializable{
 
 	private ArrayList<cards> CardsList;
 	private String name;
@@ -50,6 +56,16 @@ public class Pokedeck {
 			}
 		}
 		
+	}
+	
+	public void save() throws IOException{
+		//System.out.println(this);
+		
+		FileOutputStream fos = new FileOutputStream(this.getName()+".serial");
+		ObjectOutputStream oos= new ObjectOutputStream(fos);
+		oos.writeObject(this.toString()); 
+		oos.flush();
+	
 	}
 	
 	public void AddCard(cards c){

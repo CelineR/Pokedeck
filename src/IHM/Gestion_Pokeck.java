@@ -51,6 +51,7 @@ public class Gestion_Pokeck extends JFrame {
 		contentPane.add(btnModify);
 		
 		JButton btnSave = new JButton("Save");
+		btnSave.addActionListener(new ControlerPokedeck(this));
 		btnSave.setBounds(259, 264, 89, 23);
 		contentPane.add(btnSave);
 		

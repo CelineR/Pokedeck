@@ -2,14 +2,12 @@ package Controlers;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-
-
-
-
-
 import IHM.ChoseCardModify;
 import IHM.Gestion_Pokeck;
 import IHM.JdialogueAddCard;
@@ -49,6 +47,29 @@ public class ControlerPokedeck implements ActionListener {
 			
 		}
 
+		if(((JButton)(e.getSource())).getText()=="Save"){
+			
+		
+				
+				try {
+					
+					ControlerMenu.getP1().save();
+					JOptionPane.showMessageDialog(GP,
+							"Votre Deck est enregistré sous: "+ ControlerMenu.getP1().getName()+".serial",
+							"Attention", JOptionPane.INFORMATION_MESSAGE);
+					
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					JOptionPane.showMessageDialog(GP,
+							"Une erreur est survenue.",
+							"Attention", JOptionPane.ERROR_MESSAGE);
+				}
+				
+			
+			
+		}
+
+		
 		if(((JButton)(e.getSource())).getText()=="Consult"){
 			
 			SDC.setVisible(true);
