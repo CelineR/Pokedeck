@@ -1,8 +1,5 @@
 package IHM;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -10,12 +7,12 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
-import Controlers.ControlerMenu;
-import Controlers.ControlerPokedeck;
-import Datas.Pokedeck;
 
+import Controlers.ControlerPokedeck;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+
+
 
 public class Gestion_Pokeck extends JFrame {
 
@@ -45,28 +42,27 @@ public class Gestion_Pokeck extends JFrame {
 		
 		JButton btnConsult = new JButton("Consult");
 		btnConsult.addActionListener(new ControlerPokedeck(this));
-		btnConsult.setBounds(259, 107, 89, 23);
+		btnConsult.setBounds(259, 149, 89, 23);
 		contentPane.add(btnConsult);
 		
-		JButton btnModify = new JButton("Modify");
-		btnModify.setBounds(259, 157, 89, 23);
+		JButton btnModify = new JButton("Modify Description");
+		btnModify.addActionListener(new ControlerPokedeck(this));
+		btnModify.setBounds(228, 210, 141, 23);
 		contentPane.add(btnModify);
 		
 		JButton btnSave = new JButton("Save");
-		btnSave.setBounds(259, 206, 89, 23);
+		btnSave.setBounds(259, 264, 89, 23);
 		contentPane.add(btnSave);
 		
-		JButton btnDelete = new JButton("Delete");
-		btnDelete.setBounds(259, 252, 89, 23);
-		contentPane.add(btnDelete);
-		
-		JButton btnMenuPp = new JButton("Menu PP");
-		btnMenuPp.setBounds(259, 302, 89, 23);
-		contentPane.add(btnMenuPp);
 		
 		JButton btnAdd = new JButton("Add");
 		btnAdd.addActionListener(new ControlerPokedeck(this));
-		btnAdd.setBounds(259, 59, 89, 23);
+		btnAdd.setBounds(259, 81, 89, 23);
 		contentPane.add(btnAdd);
+		
+		JButton btnQuit = new JButton("Quit");
+		btnQuit.addActionListener(new ControlerPokedeck(this));
+		btnQuit.setBounds(259, 329, 89, 23);
+		contentPane.add(btnQuit);
 	}
 }

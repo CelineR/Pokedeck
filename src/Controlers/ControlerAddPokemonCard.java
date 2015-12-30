@@ -10,7 +10,6 @@ import javax.swing.JOptionPane;
 import Datas.Pokemon;
 import Datas.Rules;
 import Datas.cards;
-import Datas.trainer;
 import IHM.AddPokemonCard;
 
 public class ControlerAddPokemonCard implements ActionListener {
@@ -29,19 +28,6 @@ public class ControlerAddPokemonCard implements ActionListener {
 		if(((JButton)(e.getSource())).getText()=="Ajouter"){
 			
 			try{
-				
-				System.out.println(APC.getNomPokeCard());
-				System.out.println(APC.getTypeCardPoke());
-				System.out.println(APC.getNumCartePoke());
-				System.out.println(APC.getPvPokemon());
-				System.out.println(APC.getLvlPokemon());
-				System.out.println(APC.getCoutAttaque1());
-				System.out.println(APC.getAreaAttaque2());
-				System.out.println(APC.getAreaAttaque1());
-				System.out.println(APC.getCoutAttaque2());
-				System.out.println(APC.getDescPokemon());
-				System.out.println(APC.getTypePoke());
-				System.out.println(APC.getEvolPoke());
 				
 				Rules R1 = new Rules(APC.getAreaAttaque1(), APC.getCoutAttaque1());
 				Rules R2 = new Rules(APC.getAreaAttaque2(), APC.getCoutAttaque2());

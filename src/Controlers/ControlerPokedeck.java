@@ -8,6 +8,9 @@ import javax.swing.JOptionPane;
 
 
 
+
+
+import IHM.ChoseCardModify;
 import IHM.Gestion_Pokeck;
 import IHM.JdialogueAddCard;
 import IHM.ShowDeckContent;
@@ -15,8 +18,9 @@ import IHM.ShowDeckContent;
 public class ControlerPokedeck implements ActionListener {
 	
 	private Gestion_Pokeck GP;
+	private ChoseCardModify CCM = new ChoseCardModify();
 	private JdialogueAddCard JAD = new JdialogueAddCard();
-	private ShowDeckContent SDC = new ShowDeckContent();
+	private ShowDeckContent SDC = new ShowDeckContent();;
 	private static int nbcartesMax = 60;
 	
 	public ControlerPokedeck(Gestion_Pokeck Gestion_Pokeck){
@@ -39,9 +43,21 @@ public class ControlerPokedeck implements ActionListener {
 				}
 		}
 		
+		if(((JButton)(e.getSource())).getText()=="Modify Description"){
+			
+			CCM.setVisible(true);
+			
+		}
+
 		if(((JButton)(e.getSource())).getText()=="Consult"){
 			
 			SDC.setVisible(true);
+			
+		}
+
+		if(((JButton)(e.getSource())).getText()=="Quit"){
+			
+			GP.setVisible(false);
 			
 		}
 		

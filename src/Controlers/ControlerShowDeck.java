@@ -20,7 +20,6 @@ public class ControlerShowDeck implements ActionListener{
 		
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -41,7 +40,7 @@ public class ControlerShowDeck implements ActionListener{
 
 				if (Option == JOptionPane.YES_OPTION) {
 
-					SHD.getmodelMD().deleteProduit(SHD.getTable().getSelectedRow());
+					SHD.getmodelMD().deleteCard(SHD.getTable().getSelectedRow());
 					SHD.getmodelMD().fireTableDataChanged();
 					
 				}

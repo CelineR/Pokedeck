@@ -17,6 +17,7 @@ public abstract class cards {
 	 }
 
 
+
 	public String getName() {
 		return name;
 	}
@@ -34,6 +35,18 @@ public abstract class cards {
 	public String getdescription(){
 		
 		return Description;
+	}
+
+
+
+	public String getDescription() {
+		return Description;
+	}
+
+
+
+	public void setDescription(String description) {
+		Description = description;
 	}
 	
 }

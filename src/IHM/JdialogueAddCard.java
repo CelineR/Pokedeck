@@ -20,19 +20,6 @@ public class JdialogueAddCard extends JDialog {
 	private final JPanel contentPanel = new JPanel();
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		try {
-			JdialogueAddCard dialog = new JdialogueAddCard();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
 	 * Create the dialog.
 	 */
 	public JdialogueAddCard() {

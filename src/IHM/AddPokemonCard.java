@@ -36,15 +36,6 @@ public class AddPokemonCard extends JDialog {
 	private JTextArea textAreaAttaque1;
 	private JTextArea textAreaAttaque2;
 	
-	public static void main(String[] args) {
-		try {
-			AddPokemonCard dialog = new AddPokemonCard();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	/**
 	 * Create the dialog.

@@ -16,7 +16,6 @@ public class ControlerMenu implements ActionListener {
 
 	
 	private menu MenuC;
-	private Gestion_Pokeck GP;
 	private String NomPokedeck;
 	private static Pokedeck P1 = null;
 	private ArrayList<cards> ListCard = new ArrayList<cards>();

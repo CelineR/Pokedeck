@@ -14,6 +14,43 @@ public class Pokedeck {
 		this.name = name;
 	}
 
+	/**
+	 * 
+	 * @param Name
+	 * @param Numero
+	 * This method Search a card with 2 attributes
+	 * @return card
+	 */
+	public cards searchCardByAttribute(String Name, int Numero){
+		
+		for(cards card: this.CardsList){
+			if((card.getName().equals(Name))||(card.getNumCarte()== Numero)){
+					return card;
+			}
+		}
+		return null;	
+		
+	}
+	
+	
+	/**
+	 * 
+	 * @param Name
+	 * @param Type
+	 * @param Number
+	 * @param description
+	 * This method Update a Card But Only description
+	 * 
+	 * 	 */
+	public void updateDescriptionCard(String Name, String description){
+		
+		for(cards card: this.CardsList){
+			if(card.getName().equals(Name)){
+				 card.setDescription(description);
+			}
+		}
+		
+	}
 	
 	public void AddCard(cards c){
 		
@@ -28,4 +65,6 @@ public class Pokedeck {
 	public String getName() {
 		return name;
 	}
+	
+
 }

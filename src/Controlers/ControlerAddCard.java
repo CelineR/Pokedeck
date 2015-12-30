@@ -1,20 +1,9 @@
 	package Controlers;
 	
 	import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-	
-
-
-
+	import java.awt.event.ActionListener;
 	import javax.swing.JButton;
-import javax.swing.JOptionPane;
-	
-
-
-
-	import Datas.Pokedeck;
-import Datas.cards;
+	import javax.swing.JOptionPane;
 import IHM.AddEnergyCard;
 import IHM.AddPokemonCard;
 import IHM.AddTrainerCard;
@@ -26,9 +15,6 @@ import IHM.JdialogueAddCard;
 		private AddEnergyCard AEC = new AddEnergyCard();
 		private AddTrainerCard ATC = new AddTrainerCard();
 		private AddPokemonCard APC = new AddPokemonCard();
-		private int MaxTypeEnergyCard;
-		private int MaxEntraineurCard;
-		private int MaxPokemonCard;
 		
 		
 		public ControlerAddCard(JdialogueAddCard JAD){

@@ -1,12 +1,11 @@
 package Datas;
 
-import java.util.ArrayList;
-
 import javax.swing.table.AbstractTableModel;
 
 import Controlers.ControlerMenu;
 
 
+@SuppressWarnings("serial")
 public class ModelDeck extends AbstractTableModel  {
 	
 
@@ -57,7 +56,7 @@ public class ModelDeck extends AbstractTableModel  {
 		return null;
 	}
 
-	public void deleteProduit(int selectedRow) {
+	public void deleteCard(int selectedRow) {
 		
 		ControlerMenu.getP1().getCardsList().remove(selectedRow);
 		
